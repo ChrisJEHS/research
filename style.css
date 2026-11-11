@@ -1,86 +1,50 @@
-/* General Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
-  font-family: Arial, sans-serif;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #111; /* Dark background to showcase the transparency/glow */
+    color: #fff;
 }
 
 /* Navbar Container */
 .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #333;
-  color: #fff;
-  padding: 1rem 2rem;
-  position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    padding: 20px;
 }
 
-.logo {
-  font-size: 1.5rem;
-  font-weight: bold;
+/* Navigation Links List */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
 }
 
-/* Navigation List (Desktop View) */
-.nav-list {
-  list-style: none;
-  display: flex;
-  gap: 1.5rem;
+/* Individual Button Styling */
+.nav-links a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 500;
+    padding: 10px 20px;
+    border-radius: 30px; /* Rounded pill shape */
+    transition: all 0.3s ease;
+    background: transparent;
 }
 
-.nav-list a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 1rem;
-  transition: color 0.3s ease;
+/* Hover Quality: Misted/Translucent background + soft shadow */
+.nav-links a:hover {
+    background: rgba(255, 255, 255, 0.15); /* Misted transparent white */
+    backdrop-filter: blur(8px); /* Glassmorphism blur effect */
+    -webkit-backdrop-filter: blur(8px);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37); /* Soft shadow */
 }
 
-.nav-list a:hover {
-  color: #00bcd4;
-}
-
-/* Hamburger Menu Icon (Hidden by default on large screens) */
-.menu-toggle {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-  gap: 5px;
-}
-
-.bar {
-  width: 25px;
-  height: 3px;
-  background-color: #fff;
-  transition: 0.3s;
-}
-
-/* Responsive Design (Mobile View) */
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: flex; /* Show hamburger icon on small screens */
-  }
-
-  .nav-list {
-    display: none; /* Hide standard list initially */
-    flex-direction: column;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    background-color: #333;
+/* Section placeholders */
+section {
+    padding: 100px 20px;
     text-align: center;
-    padding: 1rem 0;
-  }
-
-  .nav-list.active {
-    display: flex; /* Show list when toggled */
-  }
-
-  .nav-list li {
-    padding: 0.5rem 0;
-  }
+    font-size: 1.5rem;
 }
