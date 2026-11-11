@@ -3,148 +3,263 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nexus Research Lab</title>
-    <link rel="stylesheet" href="style.css">
-    <!-- FontAwesome for Widget Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Dr. Jane Doe | Academic Portfolio</title>
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #222222;
+            --accent-color: #555555;
+            --border-color: #e0e0e0;
+            --light-gray: #f9f9f9;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* Header & Profile Section */
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .profile-img {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--border-color);
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 1.8rem;
+            margin: 0 0 5px 0;
+            letter-spacing: 0.5px;
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            color: var(--accent-color);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+        }
+
+        /* Social Icons / Links */
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .social-links a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-size: 0.95rem;
+            padding: 6px 12px;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            transition: background 0.2s;
+        }
+
+        .social-links a:hover {
+            background: var(--light-gray);
+        }
+
+        /* Navigation Menu */
+        nav {
+            border-top: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+            padding: 12px 0;
+            margin-bottom: 50px;
+            text-align: center;
+        }
+
+        nav a {
+            color: var(--text-color);
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 500;
+            font-size: 0.95rem;
+            letter-spacing: 0.5px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* Content Sections */
+        section {
+            margin-bottom: 60px;
+        }
+
+        h2 {
+            font-size: 1.3rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 8px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            color: var(--accent-color);
+        }
+
+        /* Placeholders & Grids */
+        .grid-placeholder {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 20px;
+            align-items: center;
+            background: var(--light-gray);
+            border: 1px dashed var(--border-color);
+            padding: 20px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+        }
+
+        .media-box {
+            background: #eaeaea;
+            height: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #777;
+            font-size: 0.85rem;
+            border-radius: 4px;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .blog-post-card, .contact-card {
+            background: var(--light-gray);
+            border: 1px solid var(--border-color);
+            padding: 20px;
+            border-radius: 6px;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            font-size: 0.85rem;
+            color: #888;
+            border-top: 1px solid var(--border-color);
+            padding-top: 20px;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 600px) {
+            .grid-placeholder {
+                grid-template-columns: 1fr;
+            }
+            nav a {
+                display: inline-block;
+                margin: 5px 10px;
+            }
+        }
+    </style>
 </head>
 <body>
 
-    <!-- Header & Navigation -->
-    <header class="site-header">
-        <div class="container nav-container">
-            <h1 class="logo"><i class="fa-solid fa-atom"></i> Nexus Lab</h1>
-            <nav class="nav-links">
-                <a href="#home" class="nav-link active">Home</a>
-                <a href="#about" class="nav-link">About</a>
-                <a href="#research" class="nav-link">Research</a>
-                <a href="#contact" class="nav-link">Contact</a>
-            </nav>
-        </div>
-    </header>
-
-    <!-- Main Content Area -->
-    <main class="main-content">
-
-        <!-- HOME & BLOG SECTION -->
-        <section id="home" class="page-section active">
-            <div class="hero">
-                <h2>Advancing Frontiers in Computational Science</h2>
-                <p>Welcome to the Nexus Research Group. We explore complex data systems, artificial intelligence, and sustainable technologies to shape a smarter future.</p>
-                <a href="#research" class="btn">Explore Our Work</a>
+    <div class="container">
+        
+        <!-- HOME / HEADER SECTION -->
+        <header id="home">
+            <!-- Replace 'profile.jpg' with your photo link/path -->
+            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80" alt="Profile Photo" class="profile-img">
+            <h1>Dr. Jane Doe</h1>
+            <div class="subtitle">Researcher in Bioinformatics</div>
+            
+            <div class="social-links">
+                <a href="#" target="_blank">LinkedIn</a>
+                <a href="#" target="_blank">X (Twitter)</a>
+                <a href="#" target="_blank">Google Scholar</a>
+                <a href="#" target="_blank">ResearchGate</a>
+                <a href="#" target="_blank">ORCID</a>
             </div>
+        </header>
 
-            <!-- Blog Feed Below Home -->
-            <div class="blog-section">
-                <h3>Latest Laboratory Updates</h3>
-                <div class="blog-grid">
-                    <article class="blog-card">
-                        <span class="blog-date">Nov 10, 2026</span>
-                        <h4>Paper Accepted at NeurIPS 2026</h4>
-                        <p>Our team's latest manuscript on scalable neural architectures has been officially accepted for oral presentation...</p>
-                    </article>
-                    <article class="blog-card">
-                        <span class="blog-date">Oct 28, 2026</span>
-                        <h4>New Grant Awarded for Clean Energy AI</h4>
-                        <p>We are thrilled to announce a $1.2M research grant to study machine learning applications in renewable power grids.</p>
-                    </article>
-                </div>
-            </div>
-        </section>
+        <!-- NAVIGATION -->
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#research">Research</a>
+            <a href="#blog">Blog</a>
+            <a href="#contact">Contact</a>
+        </nav>
 
         <!-- ABOUT SECTION -->
-        <section id="about" class="page-section">
-            <div class="section-header">
-                <h2>About Our Group</h2>
-                <p>Dedicated to rigorous scientific discovery and collaborative innovation.</p>
-            </div>
-            <div class="about-grid">
-                <div class="about-text">
-                    <p>Founded in 2020, Nexus Research brings together interdisciplinary scientists, engineers, and doctoral candidates. We bridge theoretical models with real-world empirical validation.</p>
-                    <ul class="highlight-list">
-                        <li><i class="fa-solid fa-check"></i> 15+ Active Postdoctoral Researchers</li>
-                        <li><i class="fa-solid fa-check"></i> State-of-the-art Simulation Hardware</li>
-                        <li><i class="fa-solid fa-check"></i> Global Academic Partnerships</li>
-                    </ul>
-                </div>
-                <div class="stats-box">
-                    <div class="stat-item">
-                        <h3>50+</h3>
-                        <p>Published Papers</p>
-                    </div>
-                    <div class="stat-item">
-                        <h3>$4M+</h3>
-                        <p>Secured Funding</p>
-                    </div>
+        <section id="about">
+            <h2>About</h2>
+            <div class="grid-placeholder">
+                <div class="media-box">[Experience / Education Image]</div>
+                <div>
+                    <p><strong>Professional Experiences & Education</strong></p>
+                    <p>Welcome to my background overview. Here you can add your degrees, institutions, past roles, and milestones alongside visual elements.</p>
                 </div>
             </div>
         </section>
 
         <!-- RESEARCH SECTION -->
-        <section id="research" class="page-section">
-            <div class="section-header">
-                <h2>Current Research Focus</h2>
-                <p>Core areas of investigation driving our academic output.</p>
+        <section id="research">
+            <h2>Research</h2>
+            <div class="blog-post-card">
+                <p><strong>Publications & Ongoing Projects</strong></p>
+                <p><em>Coming soon. Publication links, project overviews, and figures of the work will be populated here.</em></p>
+                <ul>
+                    <li><a href="#">[Sample Publication Link 1]</a></li>
+                    <li><a href="#">[Sample Publication Link 2]</a></li>
+                </ul>
             </div>
-            <div class="research-grid">
-                <div class="research-card">
-                    <i class="fa-solid fa-brain research-icon"></i>
-                    <h3>Neural Networks & AI</h3>
-                    <p>Developing efficient, interpretable machine learning models for high-dimensional scientific datasets.</p>
-                </div>
-                <div class="research-card">
-                    <i class="fa-solid fa-solar-panel research-icon"></i>
-                    <h3>Sustainable Grid Systems</h3>
-                    <p>Optimizing smart grid distributions using predictive reinforcement learning algorithms.</p>
-                </div>
-                <div class="research-card">
-                    <i class="fa-solid fa-microchip research-icon"></i>
-                    <h3>Quantum Simulation</h3>
-                    <p>Investigating molecular structures through quantum-inspired computational frameworks.</p>
-                </div>
+        </section>
+
+        <!-- BLOG SECTION -->
+        <section id="blog">
+            <h2>Blog</h2>
+            <div class="blog-post-card">
+                <div class="media-box" style="margin-bottom: 15px; height: 160px;">[Sample Post Image]</div>
+                <h3>Sample Post Title: Insights into Recent Findings</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam...</p>
+                <p style="font-size: 0.85rem; color: #888;">[Sample Date: October 2026]</p>
             </div>
         </section>
 
         <!-- CONTACT SECTION -->
-        <section id="contact" class="page-section">
-            <div class="section-header">
-                <h2>Get in Touch</h2>
-                <p>Connect with our principal investigators or explore our open positions.</p>
-            </div>
-            <div class="contact-container">
-                <form class="contact-form" onsubmit="event.preventDefault(); alert('Message sent successfully!');">
-                    <div class="form-group">
-                        <input type="text" placeholder="Your Name" required>
+        <section id="contact">
+            <h2>Contact</h2>
+            <div class="contact-card">
+                <p>Get in touch for collaborations, research inquiries, or speaking engagements.</p>
+                <div style="display: flex; gap: 20px; flex-wrap: wrap; margin-top: 15px;">
+                    <div style="flex: 1; min-width: 200px; background: #fff; padding: 15px; border: 1px solid var(--border-color); border-radius: 4px;">
+                        <strong>Social Widgets</strong>
+                        <p style="font-size: 0.85rem; margin: 5px 0 0 0;">[Twitter Timeline / Social Feed Widget Placeholder]</p>
                     </div>
-                    <div class="form-group">
-                        <input type="email" placeholder="Your Email" required>
-                    </div>
-                    <div class="form-group">
-                        <textarea rows="4" placeholder="Your Message" required></textarea>
-                    </div>
-                    <button type="submit" class="btn">Send Message</button>
-                </form>
-
-                <!-- Social/Widget Links -->
-                <div class="widgets-panel">
-                    <h3>Academic Profiles</h3>
-                    <div class="widget-links">
-                        <a href="https://scholar.google.com" target="_blank" class="widget-link"><i class="fa-solid fa-graduation-cap"></i> Google Scholar</a>
-                        <a href="https://github.com" target="_blank" class="widget-link"><i class="fa-brands fa-github"></i> GitHub Repositories</a>
-                        <a href="https://orcid.org" target="_blank" class="widget-link"><i class="fa-solid id-card"></i> ORCID Profile</a>
-                        <a href="https://linkedin.com" target="_blank" class="widget-link"><i class="fa-brands fa-linkedin"></i> LinkedIn Network</a>
+                    <div style="flex: 1; min-width: 200px; background: #fff; padding: 15px; border: 1px solid var(--border-color); border-radius: 4px;">
+                        <strong>Email Form</strong>
+                        <p style="font-size: 0.85rem; margin: 5px 0 0 0;">[Interactive Email Contact Form Placeholder]</p>
                     </div>
                 </div>
             </div>
         </section>
 
-    </main>
+        <!-- FOOTER -->
+        <footer>
+            <p>&copy; 2026 Dr. Jane Doe. All rights reserved.</p>
+        </footer>
 
-    <!-- Footer -->
-    <footer class="site-footer">
-        <p>&copy; 2026 Nexus Research Lab. All rights reserved.</p>
-    </footer>
+    </div>
 
-    <script src="script.js"></script>
 </body>
 </html>
